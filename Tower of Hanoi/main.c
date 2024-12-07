@@ -17,6 +17,9 @@ int main(){
 	int tingkatKesulitan;
 	int numDisks, numTower=3;
 	int simpanDisks = 0;
+	Highscore HS;
+	int count;
+	FILE *file;
 	
 	while(1) {
 		menu(&n);
@@ -25,11 +28,12 @@ int main(){
 			playgame(towers, numTower, numDisks);
 		}
 		else if (n == 2){
-			highscore();
+		highscore();	
 		}
 		else if (n == 3){
-			exit(1);
-		}
+			system("cls");
+			return 0;
+		}                             
 	}
 	return 0;
 }
